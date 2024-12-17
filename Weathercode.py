@@ -1,7 +1,7 @@
 import requests
 import json
 
-# API key for OpenWeatherMap
+# OpenWeatherMap API key
 api_key = "4b463278862eba6e4cbf1df5e2a82d73"  # Replace with your API key
 
 while True:
@@ -14,9 +14,8 @@ while True:
 
     try:
         
-        response = requests.get(url) # Send a request to the OpenWeatherMap API
-        response.raise_for_status()  # Check for HTTP request errors
-
+        response = requests.get(url)   # Send a request to the OpenWeatherMap API
+        response.raise_for_status()    # Check for HTTP request errors
         weather_data = response.json() # Parse the response into JSON format
 
         # Extract the necessary weather information
